@@ -1,0 +1,7 @@
+FROM amazonlinux:2
+
+RUN yum update -y && \
+    yum install -y python3-pip openssh-clients git && \
+    pip3 install ansible
+
+CMD ["/bin/bash"]

@@ -1,0 +1,22 @@
+FROM amazonlinux:2
+
+ENV JENKINS_HOME=/var/jenkins_home
+ENV JENKINS_VERSION=2.426.1
+ENV JENKINS_URL=https://get.jenkins.io/war-stable/${JENKINS_VERSION}/jenkins.war
+
+RUN yum update -y && \
+    amazon-linux-extras enable java-openjdk11 && \
+    yum install -y java-11-openjdk wget git curl unzip && \
+    yum clean all
+
+RUN useradd -m -d $JENKINS_HOME -s /bin/bash jenkins && \
+    mkdir -p /opt/jenkins && \
+    chown -R jenkins:jenkins $JENKINS_HOME /opt/jenkins
+
+RUN wget -q -O /opt/jenkins/jenkins.war $JENKINS_URL
+
+USER jenkins
+
+EXPOSE 8080
+WORKDIR $JENKINS_HOME
+CMD ["java", "-jar", "/opt/jenkins/jenkins.war"]
