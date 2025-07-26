@@ -1,7 +1,7 @@
 # DevOps Automation Stack: Kubernetes-Powered CI/CD Pipeline
 
 **Author:** [Harshwardhan Jadhav]  
-**LinkedIn Post:** [LinkedIn Post Link - To be added]
+**LinkedIn Post:** [(https://www.linkedin.com/posts/jadhavharshwardhan_github-harshwardhanjadhav0full-devops-stack-kubeadm-docker-jenkins-ansible-github-webhooks-aws-activity-7354870452239962115-eqWw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQgnCoBgMH2PuaEzuGok5YyLx2BNyWlB8E)]
 
 ---
 
